@@ -1,10 +1,10 @@
 import ollama
 
 # Configure your server URL here
-SERVER_HOST = '127.0.0.1:11434'
+SERVER_HOST = 'http://ollama.cs.wallawalla.edu:11434'
 client = ollama.Client(host=SERVER_HOST)
 
-def call_ollama(prompt, model="gemma3:4b", **options):
+def call_ollama(prompt, model="gemma3", **options):
     """
     Send a prompt to the Ollama API.
     

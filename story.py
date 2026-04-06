@@ -7,7 +7,6 @@ response = call_ollama(
     temperature=0.9, 
     top_p=0.99,
     top_k=40,
-    num_predict=40
 )
 
 print(f"Response: {response}\n")

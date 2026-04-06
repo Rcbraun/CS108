@@ -9,6 +9,5 @@ for temp in [0.0, 0.5, 1.0, 1.5]:
     response = call_ollama(
         prompt, 
         temperature=temp, 
-        num_predict=20
     )
     print(f"Response: {response}\n")

@@ -1,7 +1,7 @@
 import ollama
 
 # Replace with your server URL
-client = ollama.Client(host='127.0.0.1:11434')
+client = ollama.Client(host='http://ollama.cs.wallawalla.edu:11434')
 
 def test_connection():
     try:
