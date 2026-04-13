@@ -7,7 +7,7 @@ N = 200
 
 # Parameters (these control the pattern!)
 Du, Dv = 0.16, 0.08
-F, k = 0.060, 0.062
+F, k = 0.012, 0.050
 
 # Initialize chemicals
 U = np.ones((N, N))
@@ -42,7 +42,7 @@ def update(frame):
     return [im]
 
 fig, ax = plt.subplots()
-im = ax.imshow(V, cmap='inferno', interpolation='bilinear')
+im = ax.imshow(V, cmap='binary', interpolation='bilinear')
 ax.axis('off')
 
 # --- Mouse interaction ---
