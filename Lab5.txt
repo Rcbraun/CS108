@@ -1,0 +1,33 @@
+Lab5
+1. The exit() check runs first to see if any exit events occurred, this keeps the program from running through an entire loop if it is supposed to exit.  The update state will update the game screen when the edge is reached.  The Draw section updates the current game screen
+
+1A.  The lie goes from the top left to the bottom right.  The Y axis is equivalent to the line number, so it descends.
+
+1B.
+(255, 0,   0  )   # Red
+(0,   255, 0  )   # Green
+(0,   0,   255)   # Blue
+(255, 255, 0  )   # Yellow
+(255, 255, 255)   # white
+(0,   0,   0  )   # Black
+
+2A.
+Negating vx and vy causes the direction of movement to reverse or bounce.
+
+2A2.  Changing the vx and vy values determines the velocity of the movement between each frame.  1, 1 will move the circle 1 unit along the x axis and 1 unit along the y axis for each frame.
+
+2B.  The KEYDOWN would only change the x or y speed once per key strike.  The get_pressed() will continue the x or y speed every frame until the key is released.
+
+2C.  The circle does not keep up with the mouse position.  It only gets the position based on the Framerate.  The print statement runs once for each frame, so 60 times per second.
+
+3A. When I click the game window generates 20 circles that fan out and fade out.  The initial angle and initial velocity are randomized when the particle is initialized.  They are then affected by gravity (+0.05 to the y axis per frame)
+
+self.life is initialized with a counter of one.  each frame self.decay reduces this by a random amount of either 0.01 or 0.03 once self.life = 0 the particle is deleted from the particle list
+
+3B. The update now allows the mouse to be moved while the particles are generated.  The range in the for statement determines the number of particles generated per frame while the mouse if being clicked
+
+3C. Now the circle fades over each frame from where the mouse has been previously.  The alpha value determines the amount the historic circles fade each frame.  The higher the alpha value the faster the trail fades
+
+4A.  The particles move toward the mouse position when the right mouse button is held.  When released the particles revert and fall similarly to before.
+
+
